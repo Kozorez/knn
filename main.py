@@ -74,14 +74,14 @@ def update_neighbors(nearest_neighbors, category, new_distance):
 
 Document.get_stop_words()
 
-footballDocuments = get_known_documents(
-    Category.Football, './football_documents.txt')
+footballDocuments = get_known_documents(Category.Football,
+                                        './football_documents.txt')
 
 for footballDocument in footballDocuments:
     footballDocument.process_document()
 
-pythonDocuments = get_known_documents(
-    Category.Python, './python_documents.txt')
+pythonDocuments = get_known_documents(Category.Python,
+                                      './python_documents.txt')
 
 for pythonDocument in pythonDocuments:
     pythonDocument.process_document()
