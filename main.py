@@ -32,7 +32,7 @@ def categorize_document(unknown_document, k):
                              football_document.category,
                              distance)
 
-    print('\n')
+    print()
 
     for python_document in pythonDocuments:
         distance = Document.calculate_tanimoto_distance(unknown_document,
@@ -75,18 +75,18 @@ def update_neighbors(nearest_neighbors, category, new_distance):
 Document.get_stop_words()
 
 footballDocuments = get_known_documents(
-    Category.Football, './football_documents')
+    Category.Football, './football_documents.txt')
 
 for footballDocument in footballDocuments:
     footballDocument.process_document()
 
 pythonDocuments = get_known_documents(
-    Category.Python, './python_documents')
+    Category.Python, './python_documents.txt')
 
 for pythonDocument in pythonDocuments:
     pythonDocument.process_document()
 
-document = get_unknown_document('./new_document')
+document = get_unknown_document('./new_document.txt')
 
 document.process_document()
 
